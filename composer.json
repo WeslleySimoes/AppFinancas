@@ -1,0 +1,10 @@
+{
+    "name": "pires/app-financa",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "require": {}
+}
