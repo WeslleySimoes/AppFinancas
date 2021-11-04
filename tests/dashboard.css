@@ -1,0 +1,48 @@
+#financeiro
+{
+	/*border: 1px solid black;*/
+	overflow: auto;
+}
+
+.item-finan{
+	/*border: 1px solid black;*/
+/*	display: inline-block;*/
+	float: left;
+	width: 23%;
+	/*height: 80px;*/
+	margin: 1%;
+	padding: 20px;
+	background-color: white ;/*#A59132;*/
+	color: #1C4E80;
+	/*border-radius: 25px;*/
+}
+
+#graficos{
+	clear: both;
+	overflow: auto;
+	/*border: 1px solid black;*/
+	width: 100%;
+	/*background-color: lightcyan;*/
+}
+
+.graf
+{
+	/*border: 1px solid black;*/
+	float: left;
+	/*padding: 20px;*/
+}
+
+.g1,.g2{
+	background-color: white;
+	width: 48%;
+	height: 250px !important;
+	overflow:visible;
+	height:100px;
+	margin: 1%;
+}
+.g3{
+	width: 98%;
+	background-color: white;
+	height: 55vh;
+	margin: 1%;
+}

@@ -4,48 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Document</title>
 </head>
-<style>
-    *{
-        padding: 0px;
-        margin: 0px;
-        box-sizing: border-box;
-    }
-    div{
-        /*border: 1px solid black;*/
-        padding: 30px;
-        height:  100vh;
-        float: left;
-    }
-    #menu{
-        background-color: lightgoldenrodyellow;
-        width: 20%;
-    }
-    #conteudo{
-        background-color: lightgreen;
-        width: 80%;
-    }
-</style>
 <body>
     <div id="menu">
-        <button id="btn-menu">Clique aqui</button>
+        <ul>
+            <li><a href="#">DashBoard</a></li>
+            <li><a href="#">Lançamentos</a></li>
+            <li><a href="#">Contas</a></li>
+            <li><a href="#">Receitas</a></li>
+            <li><a href="#">Despesas</a></li>
+            <li><a href="#">Categorias</a></li>
+        </ul>
     </div>
-    <div id="conteudo"></div>
-
-    <script>
-        const btnMenu = document.getElementById('btn-menu');
-        const menu = document.getElementById('menu');
-        const conteudo = document.getElementById('conteudo');
-
-        btnMenu.onclick = () =>
-        {   
-            menu.style.width = '5%';
-            conteudo.style.width = '95%'; 
+    <div id="conteudo">
+        <div class="exemplo">
             
-            menu.style.transitionDuration = '1s';
-            conteudo.style.transitionDuration = '1s';
-        }
-    </script>
+        </div>
+    </div>
 </body>
 </html>
