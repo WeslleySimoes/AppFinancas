@@ -11,7 +11,7 @@
 - Singleton
 - Front Controller
 
-## Padrões de Arquitetura
+## Padrão de Arquitetura
 - MVC
 
 ## Bibliotecas
