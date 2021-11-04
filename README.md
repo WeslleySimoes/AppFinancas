@@ -1,3 +1,3 @@
 Teste
 
-![alt text]('https://github.com/WeslleySimoes/AppFinancas/blob/main/img1.PNG')
+![Alt text](img1.PNG?raw=true "Exemplo:")
