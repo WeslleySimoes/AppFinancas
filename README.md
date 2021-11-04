@@ -14,5 +14,8 @@
 ## Padrões de Arquitetura
 - MVC
 
+## Bibliotecas
+- Chart.js
+
 ## Exemplos
 ![Alt text](img1.PNG?raw=true "Exemplo:")
