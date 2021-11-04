@@ -1,9 +1,9 @@
 # Sistema de Finanças Pessoais
 
 ## Tecnologias
--Php 8 
--Mysql
--Composer
+- Php 8 
+- Mysql
+- Composer
 
 ## Padrões de Projetos
 - Active Record
