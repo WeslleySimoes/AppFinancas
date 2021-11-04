@@ -8,7 +8,11 @@
         {
             if(!Usuario::logado()){header('location: ./');exit;}
         
-            $this->view(['home'],[
+            $this->view([
+                'template/header',
+                'home',
+                'template/footer'
+            ],[
                 'usuario_logado' => Usuario::get('nome')
             ]);
         }

@@ -24,7 +24,6 @@ Categoria
 id
 Nome
 tipo (receita ou despesa)
-icon
 id_usuario
 status
 
