@@ -3,14 +3,30 @@
 
     class Usuario
     {
-        public static function logado()
+        public static function is_logado()
         {
-            return isset($_SESSION['usuario']);
+            if(!isset($_SESSION['usuario']))
+            {
+                header('location: ./');
+                exit;
+            }
         }
 
-        public static function iniciar($nome)
+        public static function is_deslogado()
+        {
+            if(isset($_SESSION['usuario']))
+            {
+                header('location: ./?c=home');
+                exit;
+            }
+        }
+
+        public static function iniciar(array $nome)
         {
             $_SESSION['usuario'] = $nome;
+            
+            header('location: ./?c=home');
+            exit;
         }
 
         public static function get($prop = null)
@@ -25,5 +41,7 @@
         public static function deslogar()
         {
             session_destroy();
+            header("location: ./");
+            exit();
         }
     }

@@ -6,7 +6,8 @@
     {
         public function index()
         {
-            if(!Usuario::logado()){header('location: ./');exit;}
+            //Verifica se o Usuário está logado, caso contrário vai para a página de login
+            Usuario::is_logado();
         
             $this->view([
                 'template/header',

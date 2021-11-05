@@ -11,7 +11,7 @@
             $this->activeRecord = $class;
         }
 
-        public function load(Criteria $criteria)
+        public function load(Criteria|null $criteria = null)
         {
             //instancia a instrução de SELECT
             $sql = "SELECT * FROM ".constant($this->activeRecord.'::TABLENAME');

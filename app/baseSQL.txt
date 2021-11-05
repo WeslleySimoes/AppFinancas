@@ -32,3 +32,6 @@ Despesas
 --------------
 
 
+
+https://github.com/davidecesarano/Validation
+https://stackoverflow.com/questions/24163889/html5-input-for-money-currency

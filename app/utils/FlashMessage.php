@@ -7,6 +7,8 @@
         public static function set($message)
         {
             $_SESSION['msg'] = $message;
+            header('location: ./?'.$_SERVER['QUERY_STRING']);
+            exit();
         }
 
         public static function get()

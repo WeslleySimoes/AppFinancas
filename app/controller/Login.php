@@ -9,7 +9,8 @@
     {
         public function index()
         {   
-            if(UsuarioSession::logado()){header('location: ./?c=home');}
+            //Verifica se o usuário está deslogado, caso contrário, o encaminhará para a página Home
+            UsuarioSession::is_deslogado();
             
             if(isset($_POST['email']) && isset($_POST['senha']))
             {
@@ -28,13 +29,10 @@
 
                     if(isset($usuario) && !empty($usuario))
                     {
-                        UsuarioSession::iniciar(array(
+                        UsuarioSession::iniciar([
                             'id' => $usuario[0]->id,
                             'nome' => $usuario[0]->nome
-                        ));
-
-                        header('location: ./?c=home');
-                        exit();
+                        ]);
                     }
 
                     FlashMessage::set('Usuario ou Senha incorreto!');

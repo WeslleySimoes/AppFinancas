@@ -8,7 +8,12 @@
 
         public static function string($var)
         {
-            return trim(filter_var($var,FILTER_SANITIZE_STRING));
+            if(!empty($var))
+            {
+                return ucfirst(strtolower(trim(filter_var($var,FILTER_SANITIZE_STRING))));
+            }
+
+            return false;
         }
 
         public static function int($var)
@@ -24,6 +29,11 @@
             }
             
             return false;
+        }
+
+        public static function id($val) //Method get
+        {
+            return filter_input(INPUT_GET,$val, FILTER_VALIDATE_INT);
         }
     }
     
