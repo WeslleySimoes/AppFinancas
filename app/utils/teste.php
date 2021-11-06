@@ -133,10 +133,7 @@
         else{
             echo "Tudo okay!";
         }
-
-  
     }
-
 ?>
 
 <!DOCTYPE html>

@@ -7,8 +7,8 @@
 
     <label for="tipos">Tipo: </label>
     <select name="tipos">
-    <option value="receita">Receita</option>
-    <option value="despesa">Despesa</option>
+    <option value="Receita">Receita</option>
+    <option value="Despesa">Despesa</option>
     </select>
     <input type="submit" value="Inserir">
   </form>

@@ -4,10 +4,17 @@
 
     class FlashMessage
     {
-        public static function set($message)
+        public static function set($message,$local=null)
         {
             $_SESSION['msg'] = $message;
-            header('location: ./?'.$_SERVER['QUERY_STRING']);
+
+            if(isset($local))
+            {
+                header('location: ./?'.$local);
+            }
+            else{
+                header('location: ./?'.$_SERVER['QUERY_STRING']);
+            }
             exit();
         }
 

@@ -8,8 +8,8 @@
 
     <label for="tipos">Tipo: </label>
     <select name="tipos">
-      <option value="receita" <?= $categoria->tipo == 'receita' ? 'Selected' : null ?>>Receita</option>
-      <option value="despesa" <?= $categoria->tipo == 'despesa' ? 'Selected' : null ?>>Despesa</option>
+      <option value="Receita" <?= $categoria->tipo == 'receita' ? 'Selected' : null ?>>Receita</option>
+      <option value="Despesa" <?= $categoria->tipo == 'despesa' ? 'Selected' : null ?>>Despesa</option>
     </select>
     <input type="submit" value="Editar">
   </form>

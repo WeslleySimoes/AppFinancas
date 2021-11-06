@@ -139,6 +139,23 @@ font-weight: bold;
 color: 181F2C;
 }
 
+.status_categoria_ativo{
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #2FDD92;
+    border: 1px solid #2FDD92;
+}
+
+.status_categoria_arquivado
+{
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #dd6e4c;
+    border: 1px solid #dd6e4c;
+}
+
 /*
     ------------- TELA DE INSERIR CATEGORIA -----------------------
 */
@@ -183,3 +200,4 @@ text-align: center;
 font-weight: bold;
 color: #181F2C;
 }
+
