@@ -16,10 +16,11 @@
         <h4 id="logo-sistema">Usuario: <?= $usuario_logado ?> | <a href="./?c=deslogar" style="color: white;">Sair</a></h4>
         <ul>
             <li><a href="./?c=home">DashBoard</a></li>
-            <li><a href="#">Contas</a></li>
-            <li><a href="#">Receitas</a></li>
-            <li><a href="#">Despesas</a></li>
+            <li><a href="./?c=contas">Contas</a></li>
+            <li><a href="./?c=receita">Receitas</a></li>
+            <li><a href="./?c=despesa">Despesas</a></li>
             <li><a href="./?c=categorias">Categorias</a></li>
+            <li><a href="#Relatórios">Relatórios</a></li>
         </ul>
     </div>
     <div id="conteudo">

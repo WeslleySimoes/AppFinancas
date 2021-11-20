@@ -30,6 +30,27 @@ status
 --------------
 Despesas
 --------------
+id 
+valor (R$)
+descricao
+categoria
+Data
+id_usuario
+
+
+CREATE TABLE receita
+(
+	id int PRIMARY KEY NOT NULL,
+	valor double(10,2) NOT NULL,
+	descricao varchar(60) NOT NULL,
+	id_categoria int NOT NULL,
+	desp_data date NOT NULL,
+	id_usuario int NOT NULL,
+	FOREIGN KEY (id_categoria) REFERENCES categoria(id),
+	FOREIGN KEY (id_usuario) REFERENCES usuario(id)
+)
+
+
 
 
 

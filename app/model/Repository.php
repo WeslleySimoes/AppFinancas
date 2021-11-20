@@ -11,6 +11,37 @@
             $this->activeRecord = $class;
         }
 
+        public function loadCustom($sql)
+        {
+            //Obtém a transação ativa
+            if($conn = Transaction::get())
+            {
+                //Registra mensagem de Log
+                Transaction::log($sql);
+
+                //Executa a consulta no banco de dados
+                $result = $conn->query($sql);
+
+                $results = array();
+
+                if($result)
+                {
+                    //Percorre os resultados da pesquisa retornando um objeto
+                    while($row = $result->fetchObject($this->activeRecord))
+                    {
+                        //Armazena no array result
+                        $results[] = $row;
+                    }
+
+                    return $results;
+                }
+            }
+            else
+            {
+                throw new \Exception('Não há transação ativa!');
+            }
+        }
+
         public function load(Criteria|null $criteria = null)
         {
             //instancia a instrução de SELECT
@@ -134,5 +165,38 @@
                 throw new \Exception('Não há transação ativa!');
             }
         }
+
+        public function sum(Criteria $criteria,$coluna = '*')
+        {
+            $expression = $criteria->dump();
+
+            $sql = "SELECT sum($coluna) FROM ".constant($this->activeRecord.'::TABLENAME');
+
+            if($expression)
+            {
+                $sql .= ' WHERE '.$expression;
+            }
+
+            //Obtém transação ativa
+            if($conn = Transaction::get())
+            {
+                //Inseri a string de consulta no log
+                Transaction::log($sql);
+
+                //Executa a consulta
+                $result = $conn->query($sql);
+
+                if($result)
+                {
+                    $row = $result->fetch();
+                }
+
+                return $row[0]; // Retorna o resultado
+            }
+            else
+            {
+                throw new \Exception('Não há transação ativa!');
+            }
+        }        
 
     }

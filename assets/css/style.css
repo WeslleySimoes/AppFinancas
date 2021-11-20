@@ -80,7 +80,8 @@ ul li a:hover{
 }
 .exemplo{
    /* border: 1px solid black;*/
-    height: 100%;
+   /*height: 100%;*/
+   overflow: auto;
 }
 
 #logo-sistema{
@@ -133,7 +134,7 @@ display: inline-block;
 background-color: #45a049;
 }
 
-#titulo-categoria{
+#titulo-categoria,#titulo-despesa,#titulo-receita{
 text-align: center;
 font-weight: bold;
 color: 181F2C;
@@ -201,3 +202,377 @@ font-weight: bold;
 color: #181F2C;
 }
 
+
+
+/*
+    ------------- TELA DE INSERIR DESPESA -----------------------
+*/
+
+  #form-inserir-despesa input[type=text],#form-inserir-despesa input[type=number] ,#form-inserir-despesa select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+#form-inserir-despesa input[type='date']
+{
+    color: black;
+}
+
+  #form-inserir-despesa input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  #form-inserir-despesa input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  #form-inserir-despesa {
+    border-radius: 5px;
+    width: 70%;
+    margin: 0 auto;
+   /* border: 1px solid black;*/
+   /* background-color: #e2e2e2;*/
+    padding: 15vh 20px 0px 20px;
+  }
+  
+  #titulo-despesa{
+    /*display: inline-block;*/
+    text-align: center;
+    font-weight: bold;
+    color: #181F2C;
+  }
+  #input-date{
+    width: 100%;
+    padding: 5px;
+  }
+
+
+/*
+MODAL DAS PAGINAS
+*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15vh auto 0 auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 40%;
+  font-weight: bold;
+}
+
+.modal-content p
+{
+    font-size: 19px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#btn-modal
+{
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 40px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*
+    ------------- TELA DE LISTAGEM DE DESPESA -----------------------
+*/
+
+    #customers-despesa {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers-despesa td, #customers-despesa th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers-despesa tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers-despesa tr:hover {background-color: #ddd;}
+    
+    #customers-despesa th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #181F2C;
+      color: white;
+    }
+    #btn-despInserir{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    #btn-despInserir:link, #btn-despInserir:visited {
+    background-color:  #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+    #btn-despInserir:hover, #btn-despInserir:active {
+    background-color: #45a049;
+  }
+
+  #titulo-categoria{
+    text-align: center;
+    font-weight: bold;
+    color: 181F2C;
+  }
+
+  /*
+    ------------- TELA DE LISTAGEM DE DESPESA -----------------------
+*/
+
+    #customers-receita {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers-receita td, #customers-receita  th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers-receita tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers-receita tr:hover {background-color: #ddd;}
+    
+    #customers-receita th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #181F2C;
+      color: white;
+    }
+    #btn-recInserir{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    #btn-recInserir:link, #btn-recInserir:visited {
+    background-color:  #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+    #btn-recInserir:hover, #btn-recInserir:active {
+    background-color: #45a049;
+  }
+
+/*
+*******************PÁGINA DE INSERIR CONTA*****************************
+*/
+
+#form-inserir-conta input[type=text],#form-inserir-conta input[type=number] ,#form-inserir-conta select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#form-inserir-conta input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#form-inserir-conta input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#form-inserir-conta{
+  border-radius: 5px;
+  width: 70%;
+  margin: 8vh auto 0 auto ;
+  /*border: 1px solid black;*/
+  /* background-color: #e2e2e2;*/
+  padding: 20px;
+}
+
+#titulo-conta{
+  /*display: inline-block;*/
+  text-align: center;
+  font-weight: bold;
+  color: #181F2C;
+}  
+
+/*
+*******************PÁGINA DE LISTAGEM DE CONTAS*****************************
+*/
+
+.conta_info{
+  border: 1px solid rgb(177, 177, 177);
+  width: 300px /*33.333vh;*/;
+  /*height: 20vh;*/
+  padding: 20px;
+  margin: 2.5vh 0 0 2.5vh;
+  float: left;
+  border-radius: 25px;
+}
+
+
+#titulo-conta{
+  /*display: inline-block;*/
+  text-align: center;
+  font-weight: bold;
+  color: #181F2C;
+}
+.btn_editar_conta:link, .btn_editar_conta:visited {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn_editar_conta:hover, .btn_editar_conta:active {
+  background-color: #45a049;
+}
+.btn_excluir_conta:link, .btn_excluir_conta:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn_excluir_conta:hover, .btn_excluir_conta:active {
+  background-color: red;
+}
+
+#titulo-conta_listagem{
+  /*display: inline-block;*/
+  text-align: center;
+  font-weight: bold;
+  color: #181F2C;    
+  margin-bottom: 30px;    
+}
+.tesdsd{
+  border: 1px solid black;
+}
+
+#form-listagem-conta{
+  /*border: 1px solid black;*/    
+  overflow: auto;
+}
+
+#btn-adicionar-conta
+{
+  display: inline-block;
+  margin-left: 3vh;
+}
+
+#btn-adicionar-conta:link, #btn-adicionar-conta:visited {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#btn-adicionar-conta:hover, #btn-adicionar-conta:active {
+  background-color: #45a049;
+}
+
+
+/*
+*******************PÁGINA DE EDITAR CONTA*****************************
+*/
+
+#form-editar-conta input[type=text],#form-editar-conta input[type=number] ,#form-editar-conta select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#form-editar-conta input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#form-editar-conta input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#form-editar-conta{
+  border-radius: 5px;
+  width: 70%;
+  margin: 8vh auto 0 auto ;
+ /* border: 1px solid black;*/
+ /* background-color: #e2e2e2;*/
+  padding: 20px;
+}

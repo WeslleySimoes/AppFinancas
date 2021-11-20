@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+    <title>De</title>
+</head>
+<style>
+    #customers-despesa {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    #customers-despesa td, #customers-despesa th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    #customers-despesa tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #customers-despesa tr:hover {background-color: #ddd;}
+    
+    #customers-despesa th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #181F2C;
+      color: white;
+    }
+    #btn-despInserir{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    #btn-despInserir:link, #btn-despInserir:visited {
+    background-color:  #4CAF50;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+    #btn-despInserir:hover, #btn-despInserir:active {
+    background-color: #45a049;
+  }
+
+  #titulo-categoria{
+    text-align: center;
+    font-weight: bold;
+    color: 181F2C;
+  }
+    </style>
+<body>
+    <div id="menu">
+        <h1 id="logo-sistema">Logo</h1>
+        <ul>
+            <li><a href="dashboard.html">DashBoard</a></li>
+            <li><a href="#">Contas</a></li>
+            <li><a href="#">Receitas</a></li>
+            <li><a href="#">Despesas</a></li>
+            <li><a href="categorias.html">Categorias</a></li>
+        </ul>
+    </div>
+    <div id="conteudo">
+        <div class="exemplo">
+            <h1 id="titulo-despesa">Listagem de Despesas</h1>
+            <a href="#" id="btn-despInserir"><b>+ Categoria</b></a>
+            <table id="customers-despesa">
+                <tr>
+                  <th>Descriçao</th>
+                  <th>Valor</th>
+                  <th>Categoria</th>
+                  <th>Data</th>
+                  <th colspan="2"> Ações</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,8 +1,10 @@
 <div id="financeiro">
-    <div class="item-finan">Saldo:     <br><b style="color: green;">R$ 2,000.00</b></div>
-    <div class="item-finan">Receitas:  <br><b>R$ 1,000.00</b></div>
-    <div class="item-finan">Despesas:  <br><b style="color: red;">R$ -500.00</b></div>
-    <div class="item-finan">Cartões:   <br><b>R$ 20.00</b></div>
+    <div class="item-finan">Saldo: <br>
+      <b style="color: <?= $total_saldo >= 0 ? 'green' : 'red' ?>;">R$ <?= $total_saldo ?></b>
+    </div>
+    <div class="item-finan">Receitas:  <br><b>R$ <?= $total_receitas ?></b></div>
+    <div class="item-finan">Despesas:  <br><b style="color: red;">R$ <?= $total_despesas ?></b></div>
+    <div class="item-finan">Contas:   <br><b>R$ <?= $total_contas ?></b></div>
 </div>
 <div id="graficos">
     <div class="graf g1">
@@ -16,7 +18,7 @@
 
 <script>
 const labels = [
-'January',
+'Mercado',
 'February',
 'March',
 'April',
@@ -28,9 +30,9 @@ const data = {
 labels: labels,
 datasets: [{
 label: 'My First dataset',
-backgroundColor: '#181F2C',
+backgroundColor: ['green','red','blue','yellow'],
 borderColor: '#E8E8E8',
-data: [0, 10, 5, 2, 20, 30, 45],
+data: [300, 10, 5, 2, 20, 30, 4500],
 }]
 };
 
@@ -70,14 +72,14 @@ options: {
 );
 
 var myChart3 = new Chart(
-document.getElementById('myChart3'),
-{
-    responsive: true,
-    type: 'bar',
-    data,
-    options: {
-      maintainAspectRatio: false //Deixa o gráfico responsivo
-    }
-}
+  document.getElementById('myChart3'),
+  {
+      responsive: true,
+      type: 'bar',
+      data,
+      options: {
+        maintainAspectRatio: false //Deixa o gráfico responsivo,
+      }
+  }
 );
 </script>

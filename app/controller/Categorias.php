@@ -13,8 +13,6 @@
             //Verifica se o Usuário está logado, caso contrário vai para a página de login
             Usuario::is_logado();
 
-
-
             try {
                 Transaction::open('db');
 
@@ -30,9 +28,7 @@
                 else{
                     $criteria->add('statusCat','=','1');
                 }
-
-
-
+                
                 $resultado = $carRespository->load($criteria);
 
                 Transaction::close();
@@ -161,9 +157,6 @@
                         FlashMessage::set('Erro ao alterar categoria!');
                     }
                 }
-
-                Transaction::close();
-
             }catch (\Exception $e) {
                 $e->getMessage();
                 Transaction::rollback();
