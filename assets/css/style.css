@@ -16,7 +16,7 @@ label
 }
 
 
-#menu,#conteudo{
+#menu{
     /*border: 1px solid black;*/
     height:  100vh;
     float: left;
@@ -24,13 +24,17 @@ label
 #menu{
     background-color:#181F2C ; /*#1C4E80; #30362F*/
     width: 20%;
+    margin-top: 5vh;
+    position: fixed;
 }
 #conteudo{
     background-color: #E8E8E8; /*#F1F1F1;*/
     width: 80%;
     padding: 10px;
     overflow: auto;
-
+    margin-top: 5vh;
+    float: right;
+    height: 95vh;
 }
 
 
@@ -55,6 +59,7 @@ ul li a:hover{
     width: 100%;
     padding: 10px;
     text-align: left;
+    color: #EF305E;
     /*border: 1px solid white;*/
     background-color: #232D3F;
 }
@@ -463,12 +468,12 @@ MODAL DAS PAGINAS
 
 .conta_info{
   border: 1px solid rgb(177, 177, 177);
-  width: 300px /*33.333vh;*/;
-  /*height: 20vh;*/
+  width: 30% /*33.333vh;*/;
   padding: 20px;
-  margin: 2.5vh 0 0 2.5vh;
+  margin: 3% 0 0 2.5%;
   float: left;
   border-radius: 25px;
+  background-color: white;
 }
 
 
@@ -575,4 +580,23 @@ MODAL DAS PAGINAS
  /* border: 1px solid black;*/
  /* background-color: #e2e2e2;*/
   padding: 20px;
+}
+
+
+/*
+*******************PÁGINA DE RELATÓRIOS*****************************
+*/
+
+#titulo-relatorios{
+  /*display: inline-block;*/
+  text-align: center;
+  font-weight: bold;
+  color: #181F2C;
+}
+#form-relatorios{
+  margin-bottom: 20px;
+}
+#filtros-relatorios
+{
+  margin-left: 10px;
 }

@@ -40,7 +40,7 @@
                 }
             }
             
-           $this->view(['cadastro'],[
+           $this->view(['cadastro2'],[
                "msg" => FlashMessage::get()
            ]);
         }

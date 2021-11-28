@@ -1,14 +1,20 @@
 <?php 
 
-    $arr = [
-        'Feira' => 20.3,
-        'Mercado' => 4000.30
-    ];
+    $desp = [
+        '7' => 21,
+        '10' => 656,
+        '11' => 4307
+    ];  
 
-    $chaves = array_keys($arr);
-    $valor  = array_values($arr);
+    $meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+    $valores = [0,0,0,0,0,0,0,0,0,0,0,0];
+
+    foreach($desp as $mes => $total)
+    {
+        $valores[$mes-1] = $total;
+    }
 
     echo '<pre>';
-    var_dump($chaves);
-    var_dump($valor);
+    print_r($valores);
     echo '</pre>';

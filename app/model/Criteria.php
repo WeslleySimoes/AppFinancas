@@ -11,15 +11,20 @@
             $this->filters = array();
         }
 
-        public function add($variable,$compare_operator,$value,$logic_operator = 'and')
+        public function add($variable,$compare_operator,$value,$logic_operator = 'and',$transform = true)
         {
             //Na primeira vez não precisamos concatenar
             if(empty($this->filters))
             {
                 $logic_operator = null;
             }
-
-            $this->filters[] = [$variable,$compare_operator,$this->transform($value),$logic_operator];
+            if($transform)
+            {
+                $this->filters[] = [$variable,$compare_operator,$this->transform($value),$logic_operator];
+            }
+            else{
+                $this->filters[] = [$variable,$compare_operator,$value,$logic_operator];
+            }
         }
 
         public function transform($value)

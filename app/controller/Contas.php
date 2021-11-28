@@ -3,7 +3,7 @@
     
     use app\session\Usuario;
     use app\model\class\Conta;
-    use app\utils\{FlashMessage,Validacao};
+    use app\utils\{FlashMessage,Validacao,FiltraMoeda};
     use app\model\{Transaction,Repository,Criteria};
 
 class Contas extends Controller
@@ -22,9 +22,9 @@ class Contas extends Controller
 
                 $resultContas = $respContas->load($criteria);
 
-              /*  echo '<pre>';
-                var_dump($resultContas);
-                echo '</pre>';*/
+                array_map(function($obj){
+                    return $obj->valor = FiltraMoeda::currency($obj->valor);
+                }, $resultContas);
 
                 Transaction::close();
             } catch (\Exception $e) {

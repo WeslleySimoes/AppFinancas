@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 20-Nov-2021 às 22:00
--- Versão do servidor: 10.4.18-MariaDB
--- versão do PHP: 8.0.3
+-- Host: localhost:3306
+-- Tempo de geração: 21-Nov-2021 às 01:42
+-- Versão do servidor: 10.3.20-MariaDB-0ubuntu0.19.04.1
+-- versão do PHP: 8.1.0RC2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,7 +45,15 @@ INSERT INTO `categoria` (`id`, `nome`, `tipo`, `statusCat`, `idUsuario`) VALUES
 (3, 'Salário', 'Receita', 1, 3),
 (4, 'Ações', 'Receita', 1, 3),
 (5, 'Salário', 'Receita', 1, 2),
-(6, 'Churrascaria', 'Despesa', 1, 2);
+(6, 'Churrascaria', 'Despesa', 1, 2),
+(7, 'Energia', 'Despesa', 1, 3),
+(8, 'Agua', 'Despesa', 1, 3),
+(9, 'Internet', 'Despesa', 1, 3),
+(10, 'Telefone', 'Despesa', 1, 3),
+(11, 'Aluguel', 'Despesa', 1, 3),
+(12, 'Transporte', 'Despesa', 1, 3),
+(13, 'Lazer', 'Despesa', 1, 3),
+(14, 'Salário', 'Receita', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -70,7 +78,8 @@ INSERT INTO `conta` (`id`, `valor`, `instFinanca`, `descricao`, `tipo_conta`, `i
 (6, 10000.00, 'qwdqwd', 'asdwqd', 'corrente', 2),
 (7, 1000.00, 'banco do brasil', 'sdsd', 'corrente', 3),
 (10, 30000.00, 'WDW', 'DWDW', 'corrente', 2),
-(11, 500.00, 'banco do brasil', 'sdsd', 'corrente', 3);
+(11, 500.00, 'banco do brasil', 'sdsd', 'corrente', 3),
+(12, 12000.00, 'asdasd', 'asd', 'corrente', 3);
 
 -- --------------------------------------------------------
 
@@ -92,10 +101,28 @@ CREATE TABLE `despesa` (
 --
 
 INSERT INTO `despesa` (`id`, `valor`, `descricao`, `id_categoria`, `desp_data`, `id_usuario`) VALUES
-(1, 40.30, 'Pão de queijo Novo', 2, '2021-11-23', 3),
-(2, 2500.30, 'dsdsd', 1, '2021-11-20', 3),
-(3, 1500.00, 'sdsd', 1, '2021-11-20', 3),
-(4, 500.00, 'Churrascaria Dom Pedro', 6, '2021-11-20', 2);
+(4, 500.00, 'Churrascaria Dom Pedro', 6, '2021-11-20', 2),
+(5, 150.00, 'sdsd', 1, '2021-11-20', 3),
+(6, 300.00, 'dsd', 2, '2021-11-20', 3),
+(7, 300.00, 'sdsd', 7, '2021-11-20', 3),
+(8, 80.00, 'dssd', 8, '2021-11-20', 3),
+(9, 80.00, 'dssd', 8, '2021-11-20', 3),
+(10, 150.00, 'sdsd', 9, '2021-11-20', 3),
+(11, 600.00, 'dfdfdf', 2, '2021-11-20', 3),
+(12, 362.00, 'sdsd', 12, '2021-11-20', 3),
+(13, 1500.00, 'sdsd', 11, '2021-11-20', 3),
+(14, 785.00, 'dsdsd', 13, '2021-11-20', 3),
+(15, 656.00, 'dsdsd', 2, '2021-10-20', 3),
+(16, 21.00, 'wdwd', 6, '2021-07-05', 3),
+(17, 2541.00, 'dsdwd', 1, '2021-01-20', 3),
+(18, 6000.00, 'sdsd', 1, '2021-02-20', 3),
+(19, 7520.00, 'sadad', 1, '2021-03-20', 3),
+(20, 3753.00, 'dwdwd', 1, '2021-04-20', 3),
+(21, 9000.00, 'dwdwd', 1, '2021-05-20', 3),
+(22, 2566.00, 'dwdwd', 1, '2021-06-20', 3),
+(23, 1213.00, 'dwdwd', 1, '2021-07-20', 3),
+(24, 3587.00, 'dwdwd', 1, '2021-08-20', 3),
+(25, 4785.00, 'dwdwd', 1, '2021-09-20', 3);
 
 -- --------------------------------------------------------
 
@@ -117,10 +144,20 @@ CREATE TABLE `receita` (
 --
 
 INSERT INTO `receita` (`id`, `valor`, `descricao`, `id_categoria`, `desp_data`, `id_usuario`) VALUES
-(4, 1500.00, 'Dividendo Petrobrás', 4, '2021-11-20', 3),
-(5, 2000.00, 'Dividendo de IRB3', 4, '2021-11-20', 3),
-(6, 3600.00, 'Empresa Teste', 3, '2021-11-11', 3),
-(7, 1500.00, 'Empresa  Buslatir', 5, '2021-11-20', 2);
+(1, 5600.00, 'dwdwd', 3, '2021-01-22', 3),
+(2, 3000.00, 'dwdwd', 4, '2021-02-23', 3),
+(3, 2325.00, 'wdwdwd', 3, '2021-02-10', 3),
+(4, 8022.00, 'wwdwd', 4, '2021-04-20', 3),
+(5, 6587.00, 'dwdwd', 3, '2021-03-20', 3),
+(7, 5236.00, 'dsdwd', 3, '2021-05-20', 3),
+(8, 3254.00, 'dwdwd', 3, '2021-06-20', 3),
+(9, 2789.00, 'sdwd', 3, '2021-07-20', 3),
+(10, 8741.00, 'qdwd', 3, '2021-08-20', 3),
+(11, 7412.00, 'dwdwd', 3, '2021-09-20', 3),
+(12, 4785.00, 'dawdw', 3, '2021-10-20', 3),
+(13, 5000.00, 'dwdwd', 3, '2021-11-20', 3),
+(14, 652.00, 'Dividendo', 4, '2021-11-20', 3),
+(15, 1500.00, 'Empresa Simas Turbo', 14, '2021-11-21', 1);
 
 -- --------------------------------------------------------
 

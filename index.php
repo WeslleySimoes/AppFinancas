@@ -4,13 +4,6 @@
     require_once __DIR__.'/vendor/autoload.php';
 
     const NAMESPACE_CONTROLLER = 'app\\controller\\';
-/*
-    echo '<pre>';
-    var_dump($_SERVER);
-    echo '<pre>';
-
-    echo './?'.$_SERVER['QUERY_STRING'];
-    die();*/
 
     $classe = isset($_GET['c']) ? NAMESPACE_CONTROLLER.ucfirst($_GET['c']) : NAMESPACE_CONTROLLER.'Login';
     $metodo = isset($_GET['m']) ? strtolower($_GET['m']) : 'index';
