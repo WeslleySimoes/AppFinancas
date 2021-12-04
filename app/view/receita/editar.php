@@ -1,4 +1,5 @@
 <div id="form-inserir-despesa">
+<a href="./?c=receita" class="voltar">&#9204;Voltar</a>
 <h1 id="titulo-despesa">Editar Receita</h1>
 <form action="./?c=receita&m=editar&id=<?= $_GET['id'] ?>" method="POST">
     <label for="valor">Valor (R$):</label>

@@ -129,8 +129,8 @@ label{
         <hr>
         <label for="nome">Nome:</label>
         <input type="text" name="nome" required><br>
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" name="sobrenome" required><br>
+    <!--    <label for="sobrenome">Sobrenome:</label>
+        <input type="text" name="sobrenome" required><br> -->
         <label for="email">E-mail:</label>
         <input type="email" name="email" required><br>
         <label for="senha">Senha:</label>

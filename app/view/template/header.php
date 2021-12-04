@@ -34,7 +34,7 @@
         color: #EF305E;
         text-decoration: none;
         font-weight: bold;
-        padding: 10px;
+        padding: 5px;
         font-size: 20px;
     }
     #sdsd h4
@@ -96,8 +96,6 @@
         <div id="ini-menu">
             <a href="./">Finanças Pessoais</a>
         </div> 
-
-
         <div class="dropdown">
             <button class="dropbtn"> <div id="circulo-on"></div> <?= $usuario_logado ?> &#9207</button> 
             <div class="dropdown-content">

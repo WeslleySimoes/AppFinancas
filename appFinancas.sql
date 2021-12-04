@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 21-Nov-2021 às 01:42
+-- Tempo de geração: 29-Nov-2021 às 00:08
 -- Versão do servidor: 10.3.20-MariaDB-0ubuntu0.19.04.1
 -- versão do PHP: 8.1.0RC2
 
@@ -53,7 +53,16 @@ INSERT INTO `categoria` (`id`, `nome`, `tipo`, `statusCat`, `idUsuario`) VALUES
 (11, 'Aluguel', 'Despesa', 1, 3),
 (12, 'Transporte', 'Despesa', 1, 3),
 (13, 'Lazer', 'Despesa', 1, 3),
-(14, 'Salário', 'Receita', 1, 1);
+(14, 'Salário', 'Receita', 1, 1),
+(15, 'Hora extra', 'Receita', 1, 3),
+(16, 'Salário', 'Receita', 1, 5),
+(17, 'Ações', 'Receita', 1, 5),
+(18, 'Aluguel', 'Despesa', 1, 5),
+(19, 'Mercado', 'Despesa', 1, 5),
+(20, 'Salário', 'Receita', 1, 6),
+(21, 'Aluguel', 'Despesa', 1, 6),
+(22, 'Padaria', 'Despesa', 1, 6),
+(23, 'Ações', 'Receita', 1, 6);
 
 -- --------------------------------------------------------
 
@@ -79,7 +88,10 @@ INSERT INTO `conta` (`id`, `valor`, `instFinanca`, `descricao`, `tipo_conta`, `i
 (7, 1000.00, 'banco do brasil', 'sdsd', 'corrente', 3),
 (10, 30000.00, 'WDW', 'DWDW', 'corrente', 2),
 (11, 500.00, 'banco do brasil', 'sdsd', 'corrente', 3),
-(12, 12000.00, 'asdasd', 'asd', 'corrente', 3);
+(12, 12000.00, 'asdasd', 'asd', 'corrente', 3),
+(13, 2000.00, 'Colchão', 'Dinheiro debaixo do colchão.', 'corrente', 5),
+(14, 1500.00, 'Bradesco', 'sadasd', 'Outro', 6),
+(15, 2000.00, 'Santander', 'ewewe', 'corrente', 6);
 
 -- --------------------------------------------------------
 
@@ -122,7 +134,13 @@ INSERT INTO `despesa` (`id`, `valor`, `descricao`, `id_categoria`, `desp_data`, 
 (22, 2566.00, 'dwdwd', 1, '2021-06-20', 3),
 (23, 1213.00, 'dwdwd', 1, '2021-07-20', 3),
 (24, 3587.00, 'dwdwd', 1, '2021-08-20', 3),
-(25, 4785.00, 'dwdwd', 1, '2021-09-20', 3);
+(25, 4785.00, 'dwdwd', 1, '2021-09-20', 3),
+(26, 100.00, 'ololol', 1, '2021-11-28', 3),
+(27, 500.00, 'sdsd', 1, '2021-11-28', 3),
+(28, 1500.00, 'Apartamento', 18, '2021-11-28', 5),
+(29, 365.00, 'Carrefuor', 19, '2021-11-05', 5),
+(30, 1200.00, 'Apartamento', 21, '2021-11-29', 6),
+(31, 150.00, 'Bolo, salgados e etc.', 22, '2021-11-28', 6);
 
 -- --------------------------------------------------------
 
@@ -157,7 +175,13 @@ INSERT INTO `receita` (`id`, `valor`, `descricao`, `id_categoria`, `desp_data`, 
 (12, 4785.00, 'dawdw', 3, '2021-10-20', 3),
 (13, 5000.00, 'dwdwd', 3, '2021-11-20', 3),
 (14, 652.00, 'Dividendo', 4, '2021-11-20', 3),
-(15, 1500.00, 'Empresa Simas Turbo', 14, '2021-11-21', 1);
+(15, 1500.00, 'Empresa Simas Turbo', 14, '2021-11-21', 1),
+(16, 658.00, 'asdasd', 3, '2019-11-20', 3),
+(17, 635.00, 'adasd', 15, '2021-11-28', 3),
+(18, 1500.00, 'dwadad', 16, '2021-11-28', 5),
+(19, 650.00, 'Dividendo IRB3', 17, '2021-11-28', 5),
+(20, 2000.00, 'Empresa Teste', 20, '2021-11-25', 6),
+(21, 500.00, 'Dividendo Petrobrás.', 23, '2021-11-29', 6);
 
 -- --------------------------------------------------------
 
@@ -180,7 +204,9 @@ INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
 (1, 'teste', 'teste2@teste.com', '123'),
 (2, 'Homer', 'homer@teste.com', '123'),
 (3, 'weslley', 'weslley@teste.com', '123'),
-(4, 'f', 'ffgf@rer.com', 'fg');
+(4, 'f', 'ffgf@rer.com', 'fg'),
+(5, 'joao', 'joao@teste.com', '123'),
+(6, 'fernando', 'fer@teste.com', '123');
 
 --
 -- Índices para tabelas despejadas

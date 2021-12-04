@@ -1,4 +1,5 @@
 <div id="form-inserir-despesa">
+<a href="./?c=receita" class="voltar">&#9204;Voltar</a>
 <h1 id="titulo-despesa">Inserir Receita</h1>
 <form action="./?c=receita&m=inserir" method="POST">
     <label for="valor">Valor (R$):</label>

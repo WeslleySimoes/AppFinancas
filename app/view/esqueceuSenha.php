@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Alteração de senha!</title>
+  <link rel="shortcut icon" href="assets/logo.ico" type="image/x-icon">
+</head>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
@@ -106,25 +110,34 @@ hr {
 #esqueceuSenha:hover,#criarConta:hover{
 	text-decoration: underline;
 }
+.voltar{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
 </style>
 <body>
 <div id="id01" class="modal">
-  <form class="modal-content">
+  <form class="modal-content" action="./?c=login&m=esqueceuSenha" method="POST">
     <div class="container">
-      <h1 id="titulo-login">Login</h1>
+       <a href="./?c=home" class="voltar">&#9204;Voltar</a>
+      <h1 id="titulo-login">Alteração de Senha!</h1>
       <hr>
       <label for="email"><b>Email:</b></label>
-      <input type="text" placeholder="Insira seu Email..." name="email" required>
+      <input type="text" placeholder="Insira seu Email..." name="email" required autofocus>
 
-      <label for="psw"><b>Senha:</b></label>
-      <input type="password" placeholder="Insira sua Senha" name="psw" required>
-      <div>
-      	<a href="#" id="esqueceuSenha">Esqueceu a senha?</a>
-        <a href="#" id="criarConta">Criar nova conta</a>
-      </div>
+      <label for="senha"><b>Senha:</b></label>
+      <input type="password" placeholder="Insira sua Senha..." name="senha" required>
+
+      <label for="confSenha"><b>Confirmar Senha:</b></label>
+      <input type="password" placeholder="Insira a confirmção de Senha.." name="confSenha" required>
+
       <div class="clearfix">
-        <button type="submit" class="signupbtn">Entrar</button>
+        <button type="submit" class="signupbtn">Alterar</button>
       </div>
+      <p>
+          <?= $msg ?>
+      </p>
     </div>
   </form>
 </div>

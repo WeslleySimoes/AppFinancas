@@ -1,4 +1,5 @@
 <div id="form-inserir-despesa">
+<a href="./?c=despesa" class="voltar">&#9204;Voltar</a>
 <h1 id="titulo-despesa">Inserir Despesa</h1>
 <form action="./?c=despesa&m=inserir" method="POST">
     <label for="valor">Valor (R$):</label>

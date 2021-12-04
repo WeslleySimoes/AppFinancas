@@ -1,5 +1,5 @@
 <div id="form-inserir-categoria">
-  <a href="./?c=categorias">Voltar</a>
+  <a href="./?c=categorias" class="voltar">&#9204;Voltar</a>
   <h1 id="titulo-categoria">Editar Categoria</h1>
   
   <form action="./?c=categorias&m=editar&id=<?= $_GET['id'] ?>" method="POST">

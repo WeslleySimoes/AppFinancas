@@ -1,4 +1,5 @@
 <div id="form-inserir-conta">
+    <a href="./?c=contas" class="voltar">&#9204;Voltar</a>
     <h1 id="titulo-conta">Inserir Conta</h1>
     <form action="./?c=contas&m=inserir" method="POST">
         <label for="fname">Valor (R$):</label>

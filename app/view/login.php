@@ -123,7 +123,7 @@ hr {
       <label for="senha"><b>Senha:</b></label>
       <input type="password" placeholder="Insira sua Senha" name="senha" required>
       <div>
-      	<a href="#" id="esqueceuSenha">Esqueceu a senha?</a>
+      	<a href="./?c=login&m=esqueceuSenha" id="esqueceuSenha">Esqueceu a senha?</a>
         <a href="./?c=cadastro" id="criarConta">Criar nova conta</a>
       </div>
       <div class="clearfix">

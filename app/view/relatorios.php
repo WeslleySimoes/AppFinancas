@@ -4,25 +4,52 @@
                 <div id="filtros-relatorios">
                   <label for="filtros">Filtros:</label>
                   <select name="tipos">
-                      <option value="1">Despesas por categorias</option>
-                      <option value="2">Receitas por categorias</option>
-                      <option value="3">Receitas e Despesas</option>
-                      <option value="4">Saldo por mês</option>
+                      <option value="1" <?= !empty($_POST) && $_POST['tipos'] == 1 ? 'Selected': '' ?>>Despesas por categorias</option>
+                      <option value="2" <?= !empty($_POST) && $_POST['tipos'] == 2 ? 'Selected': '' ?>> Receitas por categorias</option>
                   </select>&nbsp;&nbsp;
                   <label for="data">Data:</label>
                   <select name="mes-ano">
 
                     <?php if(!empty($lista_data)): ?>
                       <?php foreach($lista_data as $data): ?>
-                      <option value="<?= $data->mes.'/'.$data->ano ?>" <?= date('m/Y') == $data->mes.'/'.$data->ano ? 'Selected' : null ?>>
-                        <?= $mesesRelatorios[$data->mes-1].'/'.$data->ano ?>
-                      </option>
+
+                        <?php if(!empty($_POST) && $_POST['mes-ano'] == ($data->mes.'/'.$data->ano) ): ?>
+
+                          <option value="<?= $data->mes.'/'.$data->ano ?>" selected>
+                            <?= $mesesRelatorios[$data->mes-1].'/'.$data->ano ?>
+                          </option>
+
+                        <?php elseif(date('m/Y') == ($data->mes.'/'.$data->ano) && empty($_POST)): ?>
+
+                            <option value="<?= $data->mes.'/'.$data->ano ?>" selected>
+                            <?= $mesesRelatorios[$data->mes-1].'/'.$data->ano ?>
+                            </option>
+
+                        <?php else: ?>
+
+                            <option value="<?= $data->mes.'/'.$data->ano ?>">
+                            <?= $mesesRelatorios[$data->mes-1].'/'.$data->ano ?>
+                            </option>
+                        <?php endif; ?>
+
                     <?php endforeach; endif; ?>
 
                   </select>&nbsp;&nbsp;
-                  <input type="submit" value="Filtrar">
+                  <input type="submit" value="Filtrar" id="btn-filtrar-relatorio">
                 </div>
             </form>
+            <table border="1" id="table-relatorios">
+              <tr>
+                <th >Saldo</th>
+                <th>Receitas</th>
+                <th>Despesas</th>
+              </tr>
+              <tr >
+                <td>R$ <?= $total_saldo ?></td>
+                <td>R$ <?= $total_receitas ?></td>
+                <td>R$ <?= $total_despesas ?></td>
+              </tr>
+            </table>
             <div id="graficos">
               <div class="graf g3"><canvas id="myChart3"></canvas></div>
           </div>  
@@ -59,12 +86,12 @@ function contaItems(count) {
     
 const cor = contaItems(labels.length);
     const data = {
-      labels: labels,
+      labels: <?= $listaLabel ?>,
       datasets: [{
         label: 'Gráfico',
         backgroundColor: cor,
         borderColor: '#E8E8E8',
-        data: [1, 10, 5, 2, 20, 30, 45],
+        data: <?= $ListaValores ?>,
       }]
     };
     

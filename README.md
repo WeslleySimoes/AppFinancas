@@ -18,4 +18,4 @@
 - Chart.js
 
 ## Exemplos
-![Alt text](img1.PNG?raw=true "Exemplo:")
+![Alt text](img/img1.PNG?raw=true "Exemplo:")
