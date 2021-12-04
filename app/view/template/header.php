@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 
-    <title>Categorias</title>
+    <title>Finanças Pessoais</title>
 </head>
 <style>
     #sdsd
@@ -34,7 +34,7 @@
         color: #EF305E;
         text-decoration: none;
         font-weight: bold;
-        padding: 5px;
+        padding: 3%;
         font-size: 20px;
     }
     #sdsd h4
