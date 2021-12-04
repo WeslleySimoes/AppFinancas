@@ -105,7 +105,7 @@
     </div>
     <div id="menu">
         <ul>
-            <li><a href="./?c=home">DashBoard</a></li>
+            <li><a href="./?c=home">Dashboard</a></li>
             <li><a href="./?c=contas">Contas</a></li>
             <li><a href="./?c=receita">Receitas</a></li>
             <li><a href="./?c=despesa">Despesas</a></li>
