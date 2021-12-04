@@ -19,3 +19,4 @@
 
 ## Exemplos
 ![Alt text](img/img1.PNG?raw=true "Exemplo:")
+![Alt text](img/img2.PNG?raw=true "Exemplo:")
